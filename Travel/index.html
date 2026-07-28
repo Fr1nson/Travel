@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL - Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+    </div>
+
+<header id="header">
+    <nav>
+        <div class="logo"><a href="index.html">TRAVEL</a></div>
+        <!-- Иконка бургера -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Меню -->
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li class="dropdown">
+                <a href="tours.html">Туры ▾</a>
+                <div class="dropdown-content glass-morphism">
+                    <a href="tours-all.html">Все туры</a>
+                    <a href="tours-beach.html">Пляжный Отдых</a>
+                    <a href="tours-mountains.html">Горы</a>
+                </div>
+            </li>
+            <li><a href="hot-deals.html">Горящие Туры</a></li>
+            <li><a href="about.html">О Нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="profile.html" >Личный кабинет</a></li>
+        </ul>
+        <button class="cta-button" onclick="showBookingModal()">Забронировать Тур</button>
+    </nav>
+</header>
+
+<main class="home">
+    <section class="hero home-hero" id="home">
+        <div class="video-container">
+            <video autoplay muted loop playsinline preload="metadata" poster="img/1.jpg">
+                <source src="back.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-content home-hero__content">
+            <div class="home-hero__badge glass-morphism">С 2015 года</div>
+            <h1>Путешествия, которые хочется повторить</h1>
+            <p class="home-hero__lead">Подберём тур под ваши даты, бюджет и стиль отдыха. Персональный менеджер и поддержка 24/7.</p>
+            <div class="home-hero__actions">
+                <a href="tours.html" class="cta-button">Подобрать тур</a>
+                <a href="#popular" class="button-secondary">Популярные направления</a>
+            </div>
+
+            <div class="home-hero__stats">
+                <div class="stat-pill glass-morphism">
+                    <div class="stat-pill__value">50&nbsp;000+</div>
+                    <div class="stat-pill__label">клиентов</div>
+                </div>
+                <div class="stat-pill glass-morphism">
+                    <div class="stat-pill__value">120+</div>
+                    <div class="stat-pill__label">стран</div>
+                </div>
+                <div class="stat-pill glass-morphism">
+                    <div class="stat-pill__value">98%</div>
+                    <div class="stat-pill__label">рекомендаций</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="benefits">
+        <h2 class="section-title">Почему выбирают TRAVEL</h2>
+        <p class="section-subtitle">Прозрачные условия, удобный подбор и забота о путешествии на каждом этапе.</p>
+
+        <div class="features-grid">
+            <div class="feature-card glass-morphism">
+                <div class="feature-card__icon">🏆</div>
+                <h3 class="feature-card__title">Лучшие условия</h3>
+                <p class="feature-card__text">Работаем с проверенными партнёрами и предлагаем актуальные цены без сюрпризов.</p>
+            </div>
+            <div class="feature-card glass-morphism">
+                <div class="feature-card__icon">🛡️</div>
+                <h3 class="feature-card__title">Надёжность</h3>
+                <p class="feature-card__text">Официальные договоры, поддержка документов и страхование по запросу.</p>
+            </div>
+            <div class="feature-card glass-morphism">
+                <div class="feature-card__icon">⚡</div>
+                <h3 class="feature-card__title">Быстрый подбор</h3>
+                <p class="feature-card__text">Соберём маршрут под ваши пожелания: пляжи, экскурсии, горы или микс.</p>
+            </div>
+            <div class="feature-card glass-morphism">
+                <div class="feature-card__icon">💬</div>
+                <h3 class="feature-card__title">Поддержка 24/7</h3>
+                <p class="feature-card__text">На связи до, во время и после поездки. Поможем, даже если «что-то пошло не так».</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="popular">
+        <h2 class="section-title">Популярные направления</h2>
+        <p class="section-subtitle">Листайте карточки — выберите настроение, а детали тура соберём под вас.</p>
+
+        <div class="popular-carousel glass-morphism" data-carousel="popular">
+            <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Предыдущий тур">
+                <span aria-hidden="true">‹</span>
+            </button>
+
+            <div class="carousel-viewport" tabindex="0" aria-label="Популярные направления. Горизонтальный слайдер.">
+                <div class="carousel-track">
+                    <article class="carousel-slide neomorphism" data-link="tours.html">
+                        <div class="carousel-slide__media">
+                            <img src="img/mald1.jpg" alt="Мальдивы — Райский остров" loading="lazy">
+                        </div>
+                        <div class="carousel-slide__body">
+                            <h3 class="carousel-slide__title">Мальдивы — Райский остров</h3>
+                            <p class="carousel-slide__desc">Лагуны бирюзового цвета, коралловые рифы и уединённые виллы над водой.</p>
+                            <div class="carousel-slide__meta">
+                                <div class="carousel-slide__duration">📅 10 дней</div>
+                                <div class="carousel-slide__price">от 185&nbsp;000 ₽</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide neomorphism" data-link="tours.html">
+                        <div class="carousel-slide__media">
+                            <img src="img/paris3.jpg" alt="Романтический Париж" loading="lazy">
+                        </div>
+                        <div class="carousel-slide__body">
+                            <h3 class="carousel-slide__title">Романтический Париж</h3>
+                            <p class="carousel-slide__desc">Лувр, Эйфелева башня и уютные улочки Монмартра — классика европейской культуры.</p>
+                            <div class="carousel-slide__meta">
+                                <div class="carousel-slide__duration">📅 5 дней</div>
+                                <div class="carousel-slide__price">от 95&nbsp;000 ₽</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide neomorphism" data-link="tours.html">
+                        <div class="carousel-slide__media">
+                            <img src="img/alps2.png" alt="Швейцарские Альпы" loading="lazy">
+                        </div>
+                        <div class="carousel-slide__body">
+                            <h3 class="carousel-slide__title">Швейцарские Альпы</h3>
+                            <p class="carousel-slide__desc">Альпийские вершины, горные озёра и шале с видом — идеальный отдых для любителей природы.</p>
+                            <div class="carousel-slide__meta">
+                                <div class="carousel-slide__duration">📅 7 дней</div>
+                                <div class="carousel-slide__price">от 245&nbsp;000 ₽</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide neomorphism" data-link="tours.html">
+                        <div class="carousel-slide__media">
+                            <img src="img/grecOstr4.jpg" alt="Греческие острова" loading="lazy">
+                        </div>
+                        <div class="carousel-slide__body">
+                            <h3 class="carousel-slide__title">Греческие острова</h3>
+                            <p class="carousel-slide__desc">Белые домики Санторини, морской бриз и древняя история — в каждом закате.</p>
+                            <div class="carousel-slide__meta">
+                                <div class="carousel-slide__duration">📅 8 дней</div>
+                                <div class="carousel-slide__price">от 165&nbsp;000 ₽</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="carousel-slide neomorphism" data-link="tours.html">
+                        <div class="carousel-slide__media">
+                            <img src="img/japan5.jpg" alt="Япония — Цветение сакуры" loading="lazy">
+                        </div>
+                        <div class="carousel-slide__body">
+                            <h3 class="carousel-slide__title">Япония — Цветение сакуры</h3>
+                            <p class="carousel-slide__desc">Храмы Киото, неон Токио и традиции ханами — путешествие на стыке прошлого и будущего.</p>
+                            <div class="carousel-slide__meta">
+                                <div class="carousel-slide__duration">📅 12 дней</div>
+                                <div class="carousel-slide__price">от 285&nbsp;000 ₽</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Следующий тур">
+                <span aria-hidden="true">›</span>
+            </button>
+
+            <div class="carousel-dots" aria-label="Индикаторы слайдов"></div>
+        </div>
+    </section>
+
+    <section class="container" id="categories">
+        <h2 class="section-title">Форматы отдыха</h2>
+        <p class="section-subtitle">Выберите формат — и перейдите к актуальным турам.</p>
+
+        <div class="category-grid">
+            <a class="category-card neomorphism" href="tours-beach.html">
+                <div class="category-card__media">
+                    <img src="img/maldivs.jpg" alt="Пляжный отдых" loading="lazy">
+                </div>
+                <div class="category-card__body">
+                    <h3 class="category-card__title">Пляжный отдых</h3>
+                    <p class="category-card__text">Мальдивы, Греция, Кипр и другие направления для идеального релакса.</p>
+                </div>
+            </a>
+            <a class="category-card neomorphism" href="tours-mountains.html">
+                <div class="category-card__media">
+                    <img src="img/kavkaz.jpg" alt="Горы и активный отдых" loading="lazy">
+                </div>
+                <div class="category-card__body">
+                    <h3 class="category-card__title">Горы и активный отдых</h3>
+                    <p class="category-card__text">Трекинг, виды и свежий воздух. Подберём уровень сложности под вас.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="container" id="about">
+        <h2 class="section-title">О компании</h2>
+        <p class="section-subtitle">Мы делаем путешествия понятными и приятными — от идеи до возвращения домой.</p>
+
+        <div class="about-split glass-morphism">
+            <div class="about-split__text">
+                <h3 class="about-split__title">TRAVEL — когда важны детали</h3>
+                <p class="about-split__p">Подбор тура начинается с ваших пожеланий: темп, бюджет, комфорт, интересы. Мы предложим несколько вариантов и поможем выбрать лучший.</p>
+                <p class="about-split__p">Дальше берём организацию на себя: перелёты, отели, страховки, трансферы и экскурсии. Вам остаётся только наслаждаться.</p>
+                <div class="about-split__actions">
+                    <a class="button-secondary" href="about.html">Подробнее о TRAVEL</a>
+                    <a class="cta-button" href="contacts.html">Связаться с нами</a>
+                </div>
+            </div>
+
+            <div class="about-split__stats">
+                <div class="stat-card neomorphism">
+                    <div class="stat-card__value">10+</div>
+                    <div class="stat-card__label">лет опыта</div>
+                </div>
+                <div class="stat-card neomorphism">
+                    <div class="stat-card__value">15 мин</div>
+                    <div class="stat-card__label">до ответа менеджера</div>
+                </div>
+                <div class="stat-card neomorphism">
+                    <div class="stat-card__value">24/7</div>
+                    <div class="stat-card__label">поддержка в поездке</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="start">
+        <div class="cta-band glass-morphism">
+            <div class="cta-band__text">
+                <h2 class="cta-band__title">Готовы выбрать путешествие?</h2>
+                <p class="cta-band__subtitle">Оставьте заявку — и мы предложим 3–5 вариантов под ваши даты и бюджет.</p>
+            </div>
+            <div class="cta-band__actions">
+                <a class="cta-button" href="tours.html">Смотреть туры</a>
+                <a class="button-secondary" href="hot-deals.html">Горящие предложения</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="site-footer" id="footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__col site-footer__brand">
+                    <a class="site-footer__logo" href="index.html">TRAVEL</a>
+                    <p class="site-footer__text">Подбираем туры под вас и берём на себя всю организацию. Путешествуйте легко — остальное сделаем мы.</p>
+                    <div class="site-footer__social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M14 8.5V7a1 1 0 0 1 1-1h2V3h-2a4 4 0 0 0-4 4v1.5H9v3h2v9h3v-9h2.5l.5-3H14z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="X">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-5-6.4L6 22H2l7.3-8.4L1 2h6.6l4.6 6L18.9 2zm-1.1 18h1.7L6.9 3.9H5.1L17.8 20z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5A3 3 0 0 0 2.4 7.2 31.8 31.8 0 0 0 2 12a31.8 31.8 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 22 12a31.8 31.8 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Карта сайта</div>
+                    <ul class="site-footer__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="tours.html">Туры</a></li>
+                        <li><a href="hot-deals.html">Горящие туры</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Документы</div>
+                    <ul class="site-footer__list">
+                        <li><button class="footer-link-button" type="button" data-legal="privacy">Политика конфиденциальности</button></li>
+                        <li><button class="footer-link-button" type="button" data-legal="terms">Условия использования</button></li>
+                    </ul>
+
+                    <div class="site-footer__title site-footer__title--spaced">Контакты</div>
+                    <div class="site-footer__contacts">
+                        <a href="https://maps.google.com/?q=г.%20Москва,%20ул.%20Примерная,%20д.%20123" target="_blank" rel="noopener noreferrer">📍 г. Москва, ул. Примерная, д. 123</a>
+                        <a href="tel:+74951234567">📞 +7 (495) 123-45-67</a>
+                        <a href="mailto:info@travel-agency.ru">✉️ info@travel-agency.ru</a>
+                    </div>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Подписка на рассылку</div>
+                    <p class="site-footer__text">Раз в неделю отправляем подборку направлений, акции и советы по путешествиям.</p>
+                    <form class="newsletter-form" data-newsletter>
+                        <input class="newsletter-input" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+                        <button class="newsletter-button" type="submit">Подписаться</button>
+                    </form>
+                    <div class="site-footer__note">Нажимая «Подписаться», вы соглашаетесь с обработкой персональных данных.</div>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <div class="site-footer__copy">© 2026 TRAVEL. Все права защищены.</div>
+                <div class="site-footer__bottom-links">
+                    <a href="#home">Наверх</a>
+                    <a href="contacts.html">Поддержка</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="legal-modal" data-legal-modal aria-hidden="true">
+        <div class="legal-modal__backdrop" data-legal-close></div>
+        <div class="legal-modal__dialog glass-morphism" role="dialog" aria-modal="true" aria-label="Документы">
+            <button class="legal-modal__close" type="button" data-legal-close aria-label="Закрыть">×</button>
+            <div class="legal-modal__content" data-legal-content></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

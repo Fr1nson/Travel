@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL - Пляжный отдых</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+    </div>
+
+    <header id="header">
+    <nav>
+        <div class="logo"><a href="index.html">TRAVEL</a></div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Главная</a></li>
+            <li class="dropdown">
+                <a href="tours.html">Туры ▾</a>
+                <div class="dropdown-content glass-morphism">
+                    <a href="tours-all.html">Все туры</a>
+                    <a href="tours-beach.html">Пляжный Отдых</a>
+                    <a href="tours-mountains.html">Горы</a>
+                </div>
+            </li>
+            <li><a href="hot-deals.html">Горящие Туры</a></li>
+            <li><a href="about.html">О Нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="profile.html">Личный кабинет</a></li>
+        </ul>
+        <button class="cta-button" onclick="showBookingModal()">Забронировать Тур</button>
+    </nav>
+    </header>
+
+    <main class="container">
+        <div class="tour-header">
+            <h2 class="section-title">Пляжный отдых</h2>
+            <p class="section-subtitle">Тёплое море, белый песок и комфортные отели. Выберите тур и оформите заявку онлайн.</p>
+            <div class="tour-tabs">
+                <a class="tour-tab is-active" href="tours-beach.html">Пляжный отдых</a>
+                <a class="tour-tab" href="tours-mountains.html">Горы</a>
+            </div>
+        </div>
+
+        <div id="toursContainer" class="tours-container" data-tour-type="beach"></div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__col site-footer__brand">
+                    <a class="site-footer__logo" href="index.html">TRAVEL</a>
+                    <p class="site-footer__text">Подбираем туры под вас и берём на себя всю организацию. Путешествуйте легко — остальное сделаем мы.</p>
+                    <div class="site-footer__social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M14 8.5V7a1 1 0 0 1 1-1h2V3h-2a4 4 0 0 0-4 4v1.5H9v3h2v9h3v-9h2.5l.5-3H14z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="X">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-5-6.4L6 22H2l7.3-8.4L1 2h6.6l4.6 6L18.9 2zm-1.1 18h1.7L6.9 3.9H5.1L17.8 20z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5A3 3 0 0 0 2.4 7.2 31.8 31.8 0 0 0 2 12a31.8 31.8 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 22 12a31.8 31.8 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Карта сайта</div>
+                    <ul class="site-footer__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="tours.html">Туры</a></li>
+                        <li><a href="hot-deals.html">Горящие туры</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Документы</div>
+                    <ul class="site-footer__list">
+                        <li><button class="footer-link-button" type="button" data-legal="privacy">Политика конфиденциальности</button></li>
+                        <li><button class="footer-link-button" type="button" data-legal="terms">Условия использования</button></li>
+                    </ul>
+
+                    <div class="site-footer__title site-footer__title--spaced">Контакты</div>
+                    <div class="site-footer__contacts">
+                        <a href="https://maps.google.com/?q=г.%20Москва,%20ул.%20Примерная,%20д.%20123" target="_blank" rel="noopener noreferrer">📍 г. Москва, ул. Примерная, д. 123</a>
+                        <a href="tel:+74951234567">📞 +7 (495) 123-45-67</a>
+                        <a href="mailto:info@travel-agency.ru">✉️ info@travel-agency.ru</a>
+                    </div>
+                </div>
+
+                <div class="site-footer__col">
+                    <div class="site-footer__title">Подписка на рассылку</div>
+                    <p class="site-footer__text">Раз в неделю отправляем подборку направлений, акции и советы по путешествиям.</p>
+                    <form class="newsletter-form" data-newsletter>
+                        <input class="newsletter-input" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+                        <button class="newsletter-button" type="submit">Подписаться</button>
+                    </form>
+                    <div class="site-footer__note">Нажимая «Подписаться», вы соглашаетесь с обработкой персональных данных.</div>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <div class="site-footer__copy">© 2026 TRAVEL. Все права защищены.</div>
+                <div class="site-footer__bottom-links">
+                    <a href="#header">Наверх</a>
+                    <a href="contacts.html">Поддержка</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="legal-modal" data-legal-modal aria-hidden="true">
+        <div class="legal-modal__backdrop" data-legal-close></div>
+        <div class="legal-modal__dialog glass-morphism" role="dialog" aria-modal="true" aria-label="Документы">
+            <button class="legal-modal__close" type="button" data-legal-close aria-label="Закрыть">×</button>
+            <div class="legal-modal__content" data-legal-content></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
